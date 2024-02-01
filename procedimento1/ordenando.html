@@ -15,7 +15,32 @@
     />
   </head>
   <body>
-    <h1>Ordenando Valores</h1>
+    <main>
+      <div class="heading">
+        <h1>Ordenando Valores</h1>
+      </div>
+      <div class="form">
+        <label for="valor">Valor</label>
+        <input
+          id="valor"
+          class="input"
+          type="number"
+          placeholder="Digita aqui um número"
+          step="1.00"
+          required
+        />
+        <button onclick="add()">Adicionar</button>
+        <select name="algoritmo" id="algoritmo">
+          <option value="bubble-sort" selected>Bubble Sort</option>
+          <option value="selection-sort">Selection Sort</option>
+          <option value="quick-sort">Quick Sort</option>
+        </select>
+        <div class="buttons">
+          <button onclick="ordenar()">Ordenar</button>
+          <button onclick="misturar()">Misturar</button>
+        </div>
+      </div>
+    </main>
 
     <script src="ordenando.js"></script>
   </body>
