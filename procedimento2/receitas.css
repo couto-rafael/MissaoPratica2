@@ -1,0 +1,12 @@
+body {
+  background-color: #ffc107;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+#pnlCatalogo {
+  display: flex;
+  flex-wrap: wrap;
+}

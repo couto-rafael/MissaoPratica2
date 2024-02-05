@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo de Receitas</title>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/formatos.css" />
+    <link rel="stylesheet" href="./receitas.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +19,90 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <h1>Catálogo de Receitas</h1>
+  <body onload="preencheCatalogo()">
+    <div class="container-fluid bg-warning">
+      <h1>Catálogo de Receitas</h1>
+      <div id="pnlCatalogo"></div>
+    </div>
+    <script>
+      var receitas = [
+        {
+          titulo: "Batata Rústica no Forno",
+          imagem: "./pics/batata-rustica.jpg",
+          preparo:
+            "Lave as batatas e corte todas elas em tamanhos iguais (ou o melhor que conseguir) e se não gostar da casca, pode descascá-las. Unte a fôrma com óleo, coloque as batatas, sal, pimenta e os temperos à escolha (o alho também, se quiser experimentar), jogue uma colher de óleo por cima e misture tudo (com as mãos mesmo). Leve ao forno pré-aquecido a uns 240°. Deixe por vinte minutos, vire as batatas, e depois mais uns 15-20, até elas pegarem o ponto",
+          ingredientes: [
+            "Batatas",
+            "Óleo",
+            "Sal",
+            "Pimenta do reino",
+            "Dentes de alho",
+          ],
+        },
+        {
+          titulo: "Pão de Queijo de Três Ingredientes",
+          imagem: "pics/pao-de-queijo.jpg",
+          preparo:
+            "Rale o queijo parmesão. Em uma tigela grande, acrescente o queijo ralado, o creme de leite e misture tudo com uma das mãos. Acrescente aos poucos a xícara de polvilho e vá misturando bem. Sinta o ponto da massa, ela tem que desgrudar dos seus dedos e não deixar restos na tigela. Acrescente mais polvilho conforme necessário para chegar ao ponto. Faça bolinhas e coloque em uma assadeira, que será levada ao forno pré-aquecido a 180º e ficará por lá por uns 30 minutos, ou até dourar.",
+          ingredientes: [
+            "1 caixa de creme de leite",
+            "1 xícara de parmesão ralado",
+            "1 xícara de polvilho azedo",
+          ],
+        },
+        {
+          titulo: "Brigadeiro de Café com Nozes",
+          imagem: "pics/brigadeiro.jpg",
+          preparo:
+            "Aqueça uma panela em fogo médio, coloque a manteiga e o leite condensado. Mexa bem e acrescente o chocolate. Agora, além disso, você junta o café e metade das nozes. Mexe até chegar no ponto (é quando você consegue ver o fundo da panela), espalhe o brigadeiro em um prato para esfriar e use o restante das nozes por cima para decorar.",
+          ingredientes: [
+            "Leita condensado",
+            "Chocolate em pó",
+            "Manteiga",
+            "Morango",
+            "Chocolate granulado",
+          ],
+        },
+      ];
+
+      //Função obter a lista formatada
+      function getListaIngredientes(ingredientes) {
+        return `<ul>${ingredientes
+          .map((ingrediente) => `<li>${ingrediente}</li>`)
+          .reduce((a, b) => a + b, "")}</ul>`;
+      }
+
+      //Criar card da receita
+      function getCard(receita) {
+        return `
+                <div class="card" style="width: 250px;">
+                    <img src="${receita.imagem}" class="card-img-top" alt="${
+          receita.titulo
+        }">
+                    <div class="card-body">
+                        <h5 class="card-title">${receita.titulo}</h5>
+                        <div class="card-text">
+                            ${getListaIngredientes(receita.ingredientes)}
+                            <hr>
+                            ${receita.preparo}
+                        </div>
+                    </div>
+                </div>
+            `;
+      }
+
+      //Preencher catálogo com os cards
+      function preencheCatalogo() {
+        var pnlCatalogo = document.getElementById("pnlCatalogo");
+        var htmlReceitas = receitas
+          .map((receita) => getCard(receita))
+          .reduce((a, b) => a + b, "");
+        pnlCatalogo.innerHTML = htmlReceitas;
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+:root {
+  --first-color: #05161a;
+  --second-color: #072e33;
+  --third-color: #0c7078;
+  --fourth-color: #0f989c;
+  --fifth-color: #6da5c0;
+  --sixth-color: #294d61;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
