@@ -20,7 +20,7 @@
     />
   </head>
   <body onload="preencheCatalogo()">
-    <div class="container-fluid bg-warning">
+    <div class="container-fluid bg-warning cards">
       <h1>Catálogo de Receitas</h1>
       <div id="pnlCatalogo"></div>
     </div>
@@ -75,7 +75,7 @@
       //Criar card da receita
       function getCard(receita) {
         return `
-                <div class="card" style="width: 250px;">
+                <div class="card" style="width: 400px;">
                     <img src="${receita.imagem}" class="card-img-top" alt="${
           receita.titulo
         }">

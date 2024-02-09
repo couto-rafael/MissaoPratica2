@@ -1,12 +1,33 @@
 body {
   background-color: #ffc107;
+  color: #000;
 }
 
-.container-fluid {
-  padding: 20px;
+.container-fluid h1 {
+  display: flex;
+  justify-content: center;
 }
 
 #pnlCatalogo {
   display: flex;
+  margin: 20px 16px;
   flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#pnlCatalogo .card {
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid;
+}
+
+#pnlCatalogo ul {
+  margin-left: 15px;
+}
+
+#pnlCatalogo ul li {
+  align-items: start;
 }
