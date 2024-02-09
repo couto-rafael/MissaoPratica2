@@ -17,4 +17,52 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
+
+main {
+}
+
+h1,
+h2,
+h3 {
+  margin: 35px 0 35px 0;
+}
+#links {
+  display: flex;
+  gap: 20px;
+  margin: 35px 0 35px 0;
+}
+
+#links a {
+  background-color: var(--third-color);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#github {
+  background-color: var(--third-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#github a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#github a:hover,
+#links a:hover {
+  color: var(--second-color);
 }
