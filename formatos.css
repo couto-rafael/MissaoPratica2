@@ -38,6 +38,7 @@ h3 {
   display: flex;
   gap: 20px;
   margin: 35px 0 35px 0;
+  cursor: pointer;
 }
 
 #links a {
@@ -52,6 +53,7 @@ h3 {
   background-color: var(--third-color);
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #github a {

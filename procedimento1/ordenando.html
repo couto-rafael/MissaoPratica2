@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Procedimento 1</title>
 
-    <link rel="stylesheet" href="/formatos.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,29 +15,32 @@
     />
   </head>
   <body>
-    <main>
+    <header><a id="header" href="/index.html">Voltar</a></header>
+    <main id="sort-values">
       <div class="heading">
         <h1>Ordenando Valores</h1>
       </div>
       <div class="form">
-        <label for="valor">Valor</label>
-        <input
-          id="valor"
-          class="input"
-          type="number"
-          placeholder="Digite aqui um valor"
-          step="1.00"
-          required
-        />
-        <button onclick="add()">Adicionar</button>
-        <select name="algoritmo" id="algoritmo">
-          <option value="bubble-sort" selected>Bubble Sort</option>
-          <option value="selection-sort">Selection Sort</option>
-          <option value="quick-sort">Quick Sort</option>
-        </select>
-        <div class="buttons">
-          <button onclick="ordenar()">Ordenar</button>
-          <button onclick="misturar()">Misturar</button>
+        <div class="input-sort">
+          <label for="valor">Valor</label>
+          <input
+            id="valor"
+            class="input"
+            type="number"
+            placeholder="Digite aqui um valor"
+            step="1.00"
+            required
+          />
+          <button class="buttons" onclick="add()">Adicionar</button>
+          <select name="algoritmo" id="algoritmo">
+            <option value="bubble-sort" selected>Bubble Sort</option>
+            <option value="selection-sort">Selection Sort</option>
+            <option value="quick-sort">Quick Sort</option>
+          </select>
+        </div>
+        <div class="sort-buttons">
+          <button class="buttons" onclick="ordenar()">Ordenar</button>
+          <button class="buttons" onclick="misturar()">Misturar</button>
         </div>
         <ul id="valores"></ul>
       </div>

@@ -122,7 +122,7 @@ function misturar() {
   );
 
   //Aplicar shuffle
-  shuffle(valoresVetor, 5);
+  shuffle(valoresVetor, 9);
 
   //Map e Reduce
   const newItens = valoresVetor

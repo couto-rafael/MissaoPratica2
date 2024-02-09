@@ -1,0 +1,94 @@
+:root {
+  --first-color: #05161a;
+  --second-color: #072e33;
+  --third-color: #0c7078;
+  --fourth-color: #0f989c;
+  --fifth-color: #6da5c0;
+  --sixth-color: #294d61;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+header {
+  margin: 10px 0 0 20px;
+}
+
+#header {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+#sort-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  margin-top: 35px;
+}
+
+.input-sort {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.input-sort label {
+  margin: 30px 0 5px 0;
+  font-weight: bold;
+}
+
+.input-sort input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+#algoritmo {
+  padding: 10px;
+  margin: 15px 0 15px 0;
+  border-radius: 5px;
+  border: none;
+}
+.buttons {
+  background-color: var(--third-color);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  color: var(--second-color);
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  height: auto;
+}
+
+#valores {
+  margin-top: 15px;
+  padding-left: 16px;
+}
+
+#valores li {
+  margin-top: 3px;
+}
