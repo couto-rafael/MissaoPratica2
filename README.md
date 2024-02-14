@@ -13,10 +13,10 @@ Este projeto foi desenvolvido para a Missão Prática | Nível 2 | Mundo 2, da f
 <br>
 
 <p align="center">
-  <img alt="projeto Missão Prática Nível 2/2" src="./github/tela1.png" width="100%">
-  <img alt="projeto Missão Prática Nível 2/2" src="./github/tela2.png" width="100%">
-  <img alt="projeto Missão Prática Nível 2/2" src="/github/tela3.png" width="100%">
-  <img alt="projeto Missão Prática Nível 2/2" src="/github/tela4.png" width="100%">
+  <img alt="projeto Missão Prática Nível 2/2" src=".github/tela1.png" width="100%">
+  <img alt="projeto Missão Prática Nível 2/2" src=".github/tela2.png" width="100%">
+  <img alt="projeto Missão Prática Nível 2/2" src=".github/tela3.png" width="100%">
+  <img alt="projeto Missão Prática Nível 2/2" src=".github/tela4.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
